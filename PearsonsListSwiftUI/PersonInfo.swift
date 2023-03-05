@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PersonInfo: View {
-    
     let person: Person
     
     var body: some View {
