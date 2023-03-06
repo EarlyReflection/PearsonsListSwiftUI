@@ -14,18 +14,8 @@ struct DetailContactList: View {
         NavigationView {
             List(persons) { person in
                 Section(header: Text(person.fullName)) {
-                    HStack {
-                        Image(systemName: "phone")
-                            .foregroundColor(.blue)
-                            .padding(.trailing, 10)
-                        Text("\(person.phone)")
-                    }
-                    HStack {
-                        Image(systemName: "envelope")
-                            .foregroundColor(.blue)
-                            .padding(.trailing, 10)
-                        Text(person.email)
-                    }
+                    Label("\(person.phone)", systemImage: "phone")
+                    Label("\(person.email)", systemImage: "envelope")
                 }
             }
             .listStyle(.plain)

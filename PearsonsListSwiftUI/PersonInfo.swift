@@ -17,26 +17,16 @@ struct PersonInfo: View {
                 Image(person.pict)
                     .resizable()
                     .scaledToFit()
-                .frame(width: 150, height: 150)
+                    .frame(width: 150, height: 150)
                 Spacer()
             }
-            HStack {
-                Image(systemName: "phone")
-                    .foregroundColor(.blue)
-                    .padding(.trailing, 10)
-                Text("\(person.phone)")
-
-            }
-            HStack {
-                Image(systemName: "envelope")
-                    .foregroundColor(.blue)
-                    .padding(.trailing, 10)
-                Text(person.email)
-            }
-            .navigationTitle(person.fullName)
+            Label("\(person.phone)", systemImage: "phone")
+            Label("\(person.email)", systemImage: "envelope")
         }
+        .navigationTitle(person.fullName)
     }
 }
+
 
 struct PersonInfo_Previews: PreviewProvider {
     static var previews: some View {
