@@ -20,8 +20,8 @@ struct PersonInfo: View {
                     .frame(width: 150, height: 150)
                 Spacer()
             }
-            Label("\(person.phone)", systemImage: "phone")
-            Label("\(person.email)", systemImage: "envelope")
+            Label(person.phone, systemImage: "phone")
+            Label(person.email, systemImage: "envelope")
         }
         .navigationTitle(person.fullName)
     }
